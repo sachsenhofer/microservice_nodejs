@@ -117,15 +117,15 @@ kubectl get deployments,pods,services -n microservice
 ```
 
 ```
-NAME                             DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-deploy/microservice-nodejs-dep   2         2         2            2           2m
+NAME                      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+microservice-nodejs-dep   2         2         2            2           8m
 
-NAME                                          READY     STATUS    RESTARTS   AGE
-po/microservice-nodejs-dep-6b6dbdfb44-krtl7   1/1       Running   0          2m
-po/microservice-nodejs-dep-6b6dbdfb44-rpp7x   1/1       Running   0          2m
+NAME                                       READY     STATUS    RESTARTS   AGE
+microservice-nodejs-dep-85bc599557-2g7fj   1/1       Running   0          8m
+microservice-nodejs-dep-85bc599557-gzzdz   1/1       Running   0          8m
 
-NAME                          TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)          AGE
-svc/microservice-nodejs-svc   LoadBalancer   10.63.251.103   104.155.76.135   8080:30667/TCP   2m
+NAME                      TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)          AGE
+microservice-nodejs-svc   LoadBalancer   10.63.253.93    35.233.81.3     8080:31666/TCP   8m
 ```
 
 <br>
