@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: microservice-nodejs-dep
+ labels:
+   app: microservice-nodejs
+ namespace: microservice
+spec:
+ replicas: 2
+ selector:
+   matchLabels:
+     app: microservice-nodejs
+ template:
+   metadata:
+     labels:
+       app: microservice-nodejs
+   spec:
+     containers:
+     - image: eu.gcr.io/public-207110/microservice-nodejs:latest
+       name: microservice-nodejs
+       ports:
+       - containerPort: 8080

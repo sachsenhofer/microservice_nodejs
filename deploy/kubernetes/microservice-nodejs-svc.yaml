@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+ name: microservice-nodejs-svc
+ namespace: microservice
+spec:
+ selector:
+   app: microservice-nodejs
+ ports:
+ - protocol: TCP
+   port: 8080
+   targetPort: 8080
+ type: LoadBalancer
